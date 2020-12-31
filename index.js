@@ -102,5 +102,19 @@ removeItem2.addEventListener('click', function() {
 });
 
 
+// Greeting customer
+
+const section = document.getElementById('section');
+const greeting = document.getElementById('greeting');
+const checkOut = document.getElementById('checkOut')
+
+document.getElementById('greeting').style.display = 'none';
+
+checkOut.addEventListener('click', function() {
+  section.style.display = 'none';
+  greeting.style.display = 'block';
+});
+
+
 
 
