@@ -72,4 +72,35 @@ increaseItem2.addEventListener('click', function() {
 
 
 
+function removeItem(productNumber, productPrice) {
+  productNumber.value = 0;
+  productPrice.innerText = 0;
+  subTotal.innerText = parseInt(item1Price.innerText) + parseInt(item2price.innerText);
+  tax.innerText = parseInt(subTotal.innerText/ 100);
+  total.innerText = parseInt(subTotal.innerText) + parseInt(tax.innerText);
+};
+
+// remove item one
+const productItem1 = document.getElementById('increaseItem1');
+const item1Price = document.getElementById('productPrice1');
+
+const removeItem1 = document.getElementById('removeItem1');
+
+removeItem1.addEventListener('click', function() {
+  removeItem(productItem1, item1Price);
+});
+
+// remove item throw
+
+const productItem2 = document.getElementById('increaseItem2');
+const item2price = document.getElementById('productPrice2');
+
+const removeItem2 = document.getElementById('removeItem2');
+
+removeItem2.addEventListener('click', function() {
+  removeItem(productItem2, item2price);
+});
+
+
+
 
